@@ -50,6 +50,8 @@ public:
 
 		tile_map = tile_map_temp;
 
+		generate_map_cache();
+
 		return true;
 	}
 
