@@ -138,6 +138,7 @@
     <ClInclude Include="manager.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="tile.h" />
+    <ClInclude Include="route.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,14 +2,17 @@
 #define _MAP_H_
 
 #include "tile.h"
+#include "route.h"
 
 #include <SDL.h>
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <unordered_map>
 
 class Map
 {
+	typedef std::unordered_map<int, Route> SpawnerRoutePool;
 public:
 	Map() = default;
 	~Map() = default;
@@ -71,6 +74,7 @@ public:
 private:
 	TileMap tile_map;
 	SDL_Point idx_home = { 0 };
+	SpawnerRoutePool spawner_route_pool;
 
 private:
 	std::string trim_str(const std::string& str)
@@ -127,6 +131,10 @@ private:
 				{
 					idx_home.x = x;
 					idx_home.y = y;
+				}
+				else
+				{
+					spawner_route_pool[tile.special_flag] = Route(tile_map, { x,y });
 				}
 			}
 		}
