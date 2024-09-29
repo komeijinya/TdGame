@@ -2,6 +2,7 @@
 #define _CONFIG_MANAGER_H_
 
 #include "map.h"
+#include "wave.h"
 #include "manager.h"
 
 #include <SDL.h>
@@ -56,6 +57,44 @@ public:
 
 public:
 	Map map;
+	std::vector<Wave> wave_list;
+
+	int level_archer = 0;
+	int level_axman = 0;
+	int level_gunner = 0;
+
+	bool is_game_win = true;
+	bool is_game_over = false;
+	SDL_Rect rect_tile_map = { 0 };
+
+	BasicTemplate basic_template;
+
+	PlayerTemplate player_templata;
+
+	TowerTemplate archer_template;
+	TowerTemplate axman_template;
+	TowerTemplate gunner_template;
+
+	EnemyType slim_template;
+	EnemyType king_slim_template;
+	EnemyType skeleton_template;
+	EnemyType goblin_template;
+	EnemyType goblin_priesst_template;
+
+	const double num_initial_hp = 10;
+	const double num_initial_coin = 100;
+	const double num_coin_per_prop = 10;
+
+public:
+	bool load_level_config(const std::string& path)
+	{
+
+	}
+
+	bool load_game_config(const std::string& path)
+	{
+
+	}
 
 private:
 	ConfigManager() = default;
