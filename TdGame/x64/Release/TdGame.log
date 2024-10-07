@@ -1,6 +1,2 @@
 ﻿  main.cpp
-  正在生成代码
-  Previous IPDB was built with incompatible compiler, fall back to full compilation.
-  All 9 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  已完成代码的生成
-  TdGame.vcxproj -> E:\PROJECT\TdGame\x64\Release\TdGame.exe
+LINK : fatal error LNK1181: 无法打开输入文件“SDL2_ttf.lib”

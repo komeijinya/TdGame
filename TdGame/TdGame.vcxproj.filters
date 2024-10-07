@@ -16,6 +16,9 @@
     <Filter Include="头文件\manager">
       <UniqueIdentifier>{bb312464-efa3-4dd7-b187-428c80e94e41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\manager\资源文件">
+      <UniqueIdentifier>{1727af7a-98f1-4d35-b7ce-f0d83c00a651}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

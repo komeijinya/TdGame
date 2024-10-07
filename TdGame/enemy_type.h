@@ -3,7 +3,7 @@
 enum class EnemyType
 {
 	Slim,
-	Kingslim,
+	KingSlim,
 	Skeleton,
 	Goblin,
 	GoblinPriest
