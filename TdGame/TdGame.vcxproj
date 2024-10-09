@@ -142,6 +142,7 @@
     <ClInclude Include="tile.h" />
     <ClInclude Include="route.h" />
     <ClInclude Include="wave.h" />
+    <ClInclude Include="resources_manager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
