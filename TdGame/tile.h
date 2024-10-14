@@ -3,6 +3,8 @@
 
 #include <vector>
 
+#define SIZE_TILE 48
+
 struct Tile
 {
 	enum class Direction
