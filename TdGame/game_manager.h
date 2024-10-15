@@ -151,6 +151,37 @@ private:
 		ConfigManager* config = ConfigManager::instance();
 		rect_tile_map.x = (config->basic_template.window_width - width_tex_tile_map) / 2;
 		rect_tile_map.y = (config->basic_template.window_height - height_tex_tile_map) / 2;
+		rect_tile_map.w = width_tex_tile_map;
+		rect_tile_map.h = height_tex_tile_map;
+
+		SDL_SetTextureBlendMode(tex_tile_map, SDL_BLENDMODE_BLEND);
+		SDL_SetRenderTarget(renderer, tex_tile_map);
+
+		for (int y = 0; y < map.get_height(); y++)
+		{
+			for (int x = 0; x < map.get_width(); x++)
+			{
+				SDL_Rect rect_src;
+				const Tile& tile = tile_map[y][x];
+
+				const SDL_Rect& rect_dist =
+				{
+					x * SIZE_TILE,y * SIZE_TILE,
+					SIZE_TILE,SIZE_TILE
+				};
+
+				rect_src =
+				{
+					(tile.terrian % num_tile_single_line) * SIZE_TILE,
+					(tile.terrian / num_tile_single_line) * SIZE_TILE,
+					SIZE_TILE,SIZE_TILE
+				};
+
+
+			}
+		}
+
+		SDL_SetRenderTarget(renderer, nullptr);
 
 		return true;
 	}

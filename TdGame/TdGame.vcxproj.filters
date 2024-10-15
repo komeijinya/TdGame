@@ -19,10 +19,16 @@
     <Filter Include="头文件\manager\资源文件">
       <UniqueIdentifier>{1727af7a-98f1-4d35-b7ce-f0d83c00a651}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\cJSON">
+      <UniqueIdentifier>{b41c03e5-2074-441f-a272-d4f713cf0fc7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\thirdparty\cJSON\cJSON.c">
+      <Filter>源文件\cJSON</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
