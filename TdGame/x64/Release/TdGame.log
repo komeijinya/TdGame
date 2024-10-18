@@ -1,6 +1,14 @@
-﻿    正在创建库 E:\PROJECT\TdGame\x64\Release\TdGame.lib 和对象 E:\PROJECT\TdGame\x64\Release\TdGame.exp
+﻿  main.cpp
+E:\PROJECT\TdGame\TdGame\config_manager.h(125,74): warning C4390: “;”: 找到空的受控语句；这是否是有意的?
+  (编译源文件“main.cpp”)
+  
+E:\PROJECT\TdGame\TdGame\config_manager.h(141,93): warning C4390: “;”: 找到空的受控语句；这是否是有意的?
+  (编译源文件“main.cpp”)
+  
+    正在创建库 E:\PROJECT\TdGame\x64\Release\TdGame.lib 和对象 E:\PROJECT\TdGame\x64\Release\TdGame.exp
   正在生成代码
-  Compiler switch has changed, fall back to full compilation.
-  All 1585 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  1 of 1586 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   已完成代码的生成
   TdGame.vcxproj -> E:\PROJECT\TdGame\x64\Release\TdGame.exe

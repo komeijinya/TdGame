@@ -126,7 +126,9 @@ private:
 
 	void on_render()
 	{
-
+		static ConfigManager* instance = ConfigManager::instance();
+		static SDL_Rect& rect_dst = instance->rect_tile_map;
+		SDL_RenderCopy(renderer, tex_tile_map, nullptr, &rect_dst);
 	}
 
 	bool generate_tile_map_texture()
@@ -164,7 +166,7 @@ private:
 				SDL_Rect rect_src;
 				const Tile& tile = tile_map[y][x];
 
-				const SDL_Rect& rect_dist =
+				const SDL_Rect& rect_dst =
 				{
 					x * SIZE_TILE,y * SIZE_TILE,
 					SIZE_TILE,SIZE_TILE
@@ -177,9 +179,29 @@ private:
 					SIZE_TILE,SIZE_TILE
 				};
 
+				SDL_RenderCopy(renderer, tex_tile_set, &rect_src, &rect_dst);
+
+				if (tile.decoration >= 0)
+				{
+					rect_src =
+					{
+						(tile.decoration % num_tile_single_line)* SIZE_TILE,
+						(tile.decoration / num_tile_single_line)* SIZE_TILE,
+						SIZE_TILE,SIZE_TILE
+					};
+					SDL_RenderCopy(renderer, tex_tile_set, &rect_src, &rect_dst);
+				}
 
 			}
 		}
+
+		const SDL_Point& idx_home = map.get_idx_home();
+		const SDL_Rect rect_dst =
+		{
+			idx_home.x * SIZE_TILE,idx_home.y * SIZE_TILE,
+			SIZE_TILE,SIZE_TILE
+		};
+		SDL_RenderCopy(renderer, ResourcesManager::instance()->get_texture_pool().find(ResID::Tex_Home)->second, nullptr, &rect_dst);
 
 		SDL_SetRenderTarget(renderer, nullptr);
 

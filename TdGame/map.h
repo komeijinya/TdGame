@@ -20,7 +20,7 @@ public:
 	bool load(const std::string& path)
 	{
 		std::ifstream file(path);
-		if (file.good()) return false;
+		if (!file.good()) return false;
 
 		TileMap tile_map_temp;
 
