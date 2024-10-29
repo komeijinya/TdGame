@@ -22,6 +22,9 @@
     <Filter Include="源文件\cJSON">
       <UniqueIdentifier>{b41c03e5-2074-441f-a272-d4f713cf0fc7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\enemy">
+      <UniqueIdentifier>{e05ca114-bcfd-4f32-b0a5-bd2568968443}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,9 +56,6 @@
     <ClInclude Include="wave.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="enemy_type.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="resources_manager.h">
       <Filter>头文件\manager</Filter>
     </ClInclude>
@@ -64,6 +64,15 @@
     </ClInclude>
     <ClInclude Include="animation.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy_type.h">
+      <Filter>头文件\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>头文件\enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

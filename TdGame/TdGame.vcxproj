@@ -138,6 +138,7 @@
   <ItemGroup>
     <ClInclude Include="animation.h" />
     <ClInclude Include="config_manager.h" />
+    <ClInclude Include="enemy.h" />
     <ClInclude Include="enemy_type.h" />
     <ClInclude Include="game_manager.h" />
     <ClInclude Include="manager.h" />
@@ -145,6 +146,7 @@
     <ClInclude Include="tile.h" />
     <ClInclude Include="route.h" />
     <ClInclude Include="timer.h" />
+    <ClInclude Include="vector2.h" />
     <ClInclude Include="wave.h" />
     <ClInclude Include="resources_manager.h" />
   </ItemGroup>
