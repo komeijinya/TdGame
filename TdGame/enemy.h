@@ -171,7 +171,7 @@ public:
 
 	double get_raward_radius() const
 	{
-		return reward_radio;
+		return reward_ratio;
 	}
 
 	double get_recover_intensity() const
@@ -211,7 +211,7 @@ protected:
 	double speed = 0;
 	double max_speed = 0;
 	double damage = 0;
-	double reward_radio = 0;
+	double reward_ratio = 0;
 	double recover_interval = 0;
 	double recover_range = 0;
 	double recover_intensity = 0;
@@ -224,7 +224,7 @@ private:
 	bool is_valid = true;
 
 	Timer Timer_sketch;
-	bool is_show_sketch;
+	bool is_show_sketch  = false;
 
 	Animation* anim_current = nullptr;
 

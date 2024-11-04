@@ -138,8 +138,8 @@ public:
 						spawn_event.interval = json_spawn_event_interval->valuedouble;
 
 					cJSON* json_spawn_event_spawn_point = cJSON_GetObjectItem(json_spawn_event, "point");
-					if (json_spawn_event_spawn_point && json_spawn_event_spawn_point->type == cJSON_Number);
-					spawn_event.spawn_point = json_spawn_event_spawn_point->valueint;
+					if (json_spawn_event_spawn_point && json_spawn_event_spawn_point->type == cJSON_Number)
+						spawn_event.spawn_point = json_spawn_event_spawn_point->valueint;
 					
 					cJSON* json_spawn_event_enemy_type = cJSON_GetObjectItem(json_spawn_event, "enemy");
 					if (json_spawn_event_enemy_type && json_spawn_event_enemy_type->type == cJSON_String)
